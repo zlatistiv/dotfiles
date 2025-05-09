@@ -1,0 +1,47 @@
+# Google mail server config
+set folder = "imaps://zlatistiv@gmail.com@imap.gmail.com:993"
+set smtp_url = "smtp://zlatistiv@gmail.com@smtp.gmail.com:587"
+source ~/.config/mutt/.secrets.muttrc
+
+# SSL
+set ssl_force_tls = yes
+
+# Mailboxes
+set spoolfile = "+INBOX"
+set record = "+Sent Mail"
+set trash = "+Trash"
+set postponed = "+Drafts"
+mailboxes =INBOX =Sent =Srash =Drafts =Junk =Other
+
+# User
+set from = "zlatistiv@gmail.com"
+set realname = "Nikola Z. Ivanov"
+set editor = "nvim"
+set edit_headers = yes
+unset use_domain
+
+source ~/.config/mutt/colors.muttrc
+
+# ================  IMAP ====================
+# set imap_user = zlatistiv@gmail.com
+# set imap_pass = "bqwi mazv zxjz qhqi"
+# set spoolfile = imaps://imap.gmail.com/INBOX
+# set folder = imaps://imap.gmail.com/
+# set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
+# set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+# set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+# set header_cache = "~/.mutt/cache/headers"
+# set message_cachedir = "~/.mutt/cache/bodies"
+# set certificate_file = "~/.mutt/certificates"
+# ================  SMTP  ====================
+# set smtp_url = "smtp://zlatistiv@smtp.gmail.com:587/"
+# set smtp_pass = $imap_pass
+# set ssl_force_tls = yes # Require encrypted connection# ================  Composition  ====================
+# set editor = "nvim"      # Set your favourite editor.
+# set edit_headers = yes  # See the headers when editing
+# set charset = UTF-8     # value of $LANG; also fallback for send_charset
+# Sender, email address, and sign-off line must match
+# unset use_domain        # because joe@localhost is just embarrassing
+# set realname = "Nikola Z. Ivanov"
+# set from = "zlatistiv@gmail.com"
+# set use_from = yes

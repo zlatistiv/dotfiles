@@ -2,6 +2,8 @@ PROMPT_DIR_COLOR=34
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 HISTTIMEFORMAT="%d/%m/%y %T "
+HISTSIZE=-1
+HISTFILESIZE=-1
 EDITOR=/bin/nvim
 
 # Wrap text

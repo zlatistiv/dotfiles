@@ -1,6 +1,0 @@
-[user]
-	email = zlatistiv@gmail.com
-	name = Nikola Z. Ivanov
-	signingkey = D1354D402993BECC
-[sendemail]
-	smtpserver = /usr/bin/neomutt -H

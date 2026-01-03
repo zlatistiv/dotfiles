@@ -8,10 +8,9 @@ set ssl_force_tls = yes
 
 # Mailboxes
 set spoolfile = "+INBOX"
-set record = "+Sent Mail"
-set trash = "+Trash"
-set postponed = "+Drafts"
-mailboxes =INBOX =Sent =Trash =Drafts =Junk =Other
+#set record="+[Gmail]/Sent Mail"
+set postponed="+[Gmail]/Drafts"
+mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
 
 # User
 set from = "zlatistiv@gmail.com"

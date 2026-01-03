@@ -5,6 +5,7 @@ HISTTIMEFORMAT="%d/%m/%y %T "
 HISTSIZE=-1
 HISTFILESIZE=-1
 EDITOR=/bin/nvim
+alias vim=nvim
 
 # Wrap text
 tput smam
@@ -25,7 +26,7 @@ export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 export GROFF_NO_SGR=1         # For Konsole and Gnome-terminal
 
-# Key binds
+# Key binds, these need to be ran only once to set up gnome
 # gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
 # gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Alt>Shift_L']"
 # gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"

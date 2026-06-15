@@ -63,6 +63,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 })
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+	vim.opt.tabstop = 4
+	vim.opt.shiftwidth = 0    -- Always mirrors tabstop
+	vim.opt.expandtab = false
+  end,
+})
+
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

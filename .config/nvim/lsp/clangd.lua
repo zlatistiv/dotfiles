@@ -10,7 +10,7 @@ return {
       vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
     end
 
-    bufmap("n", "gd", vim.lsp.buf.definition, "Go to definition")
+    bufmap("n", "gd", _G.tracked_definition, "Go to definition")
     bufmap("n", "K", vim.lsp.buf.hover, "Hover documentation")
     bufmap("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
   end,

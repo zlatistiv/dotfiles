@@ -19,5 +19,5 @@ vim.opt.list = false
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 999
 vim.opt.winborder = "solid" -- https://neovim.io/doc/user/options.html#'winborder'

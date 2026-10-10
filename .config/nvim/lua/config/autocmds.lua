@@ -65,7 +65,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
-	vim.opt.tabstop = 4
+	vim.opt.tabstop = 8
 	vim.opt.shiftwidth = 0    -- Always mirrors tabstop
 	vim.opt.expandtab = false
   end,

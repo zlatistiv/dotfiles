@@ -1,8 +1,20 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+--vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = true })
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = true })
+
+local tb = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ws', tb.lsp_dynamic_workspace_symbols)
+vim.keymap.set('n', '<leader>ds', tb.lsp_document_symbols)
+vim.keymap.set('n', 'gr', tb.lsp_references)  -- nicer than the quickfix version
+
+-- Grep text inside a specific directory
+vim.keymap.set('n', '<leader>fd', function()
+	local dir = vim.fn.input('Dir: ', '', 'dir')
+	if dir == '' then dir = '.' end
+	tb.live_grep({ search_dirs = { dir } })
+end)
 
 vim.g.mapleader = " "
 
